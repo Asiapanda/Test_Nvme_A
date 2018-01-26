@@ -1,0 +1,31 @@
+//Test_Nvme_A.inf
+[Defines]
+  INF_VERSION			= 0x00010005
+  BASE_NAME				= Test_Nvme_A
+  FILE_GUID				= 1227ff00-9916-9917-9918-1f3415f2456f
+  MODULE_TYPE			= UEFI_APPLICATION
+  VERSION_STRING		= 1.0
+  ENTRY_POINT			= UefiMain
+  
+  PCI_CLASS_CODE        = 0x010802
+  PCI_VENDOR_ID         = 0x8086
+  PCI_DEVICE_ID         = 0x2921
+  
+  PCI_REVISION          = 0x0003
+
+
+
+[Sources]
+  Test_Nvme_A.c
+
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+
+[BuildOptions]
+  MSFT:*_*_*_CC_FLAGS = /wd4804
