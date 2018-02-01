@@ -1,7 +1,7 @@
 //Test_Nvme_A.inf
 [Defines]
   INF_VERSION			= 0x00010005
-  BASE_NAME				= Test_Nvme_A
+  BASE_NAME				= Test_Nvme_Ashe
   FILE_GUID				= 1227ff00-9916-9917-9918-1f3415f2456f
   MODULE_TYPE			= UEFI_APPLICATION
   VERSION_STRING		= 1.0
@@ -17,6 +17,11 @@
 
 [Sources]
   Test_Nvme_A.c
+  Test_Nvme_A.h
+  A_Nvme.c
+  A_Nvme.h
+  Dbg.c
+  Dbg.h
 
 
 [Packages]
@@ -27,5 +32,21 @@
   UefiApplicationEntryPoint
   UefiLib
 
+  
+[Protocols]
+  gEfiSerialIoProtocolGuid
+  gEfiNvmExpressPassThruProtocolGuid
+  
+  [LibraryClasses]
+  BaseMemoryLib
+  BaseLib
+  DebugLib
+  DevicePathLib
+  MemoryAllocationLib
+  UefiBootServicesTableLib
+  UefiLib
+  PrintLib
+  
+  
 [BuildOptions]
   MSFT:*_*_*_CC_FLAGS = /wd4804
