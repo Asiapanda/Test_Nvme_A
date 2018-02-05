@@ -16,12 +16,16 @@
 
 
 [Sources]
+  Dbg.c
+  Dbg.h
   Test_Nvme_A.c
   Test_Nvme_A.h
   A_Nvme.c
   A_Nvme.h
-  Dbg.c
-  Dbg.h
+  A_FirmwareInfo.c
+  A_FirmwareInfo.h
+  A_SmartInfo.c
+  A_SmartInfo.h
 
 
 [Packages]
